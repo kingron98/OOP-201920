@@ -22,12 +22,10 @@ class Types_and_Strings:
         print(message[:4])
         print(message[2:])
         print(message[1:2])
-<<<<<<< HEAD
         print(message[1:5:3])
-=======
+        print(message[1:4:2])
         print(message[1:4:2])
 
->>>>>>> 66cc338205b6de192a49d6b554ff2ecd8d017361
         # escaping a character
         print("He said \"that's fantastic\"!")
 
@@ -44,15 +42,17 @@ class Types_and_Strings:
         print(message)
 
         # printing only characters at even index positions
-<<<<<<< HEAD
         for i in range(0, 20, 2):
             print("index" + "[" + str(i) + "] " + message[i])
 
-=======
         length = len(message)
         for i in range(0, length, 2):
             print("index" + "[" + str(i) + "] " + message[i])
->>>>>>> 66cc338205b6de192a49d6b554ff2ecd8d017361
+
+        length = len(message)
+        for i in range(0, length, 2):
+            print("index" + "[" + str(i) + "] " + message[i])
+
 
     def play_with_lists(self):
         message = input("Please enter a whole sentence: ")
