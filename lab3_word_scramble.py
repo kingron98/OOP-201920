@@ -3,7 +3,6 @@
 # author: B. Schoen-Phelan
 # date: 08-10-2019
 # purpose: Lab 3
-
 import string
 
 class WordScramble:
@@ -15,6 +14,8 @@ class WordScramble:
         print("The user input was: ", self.user_input)
 
         # first scramble is just one word
+        print(self.user_input[0] + self.user_input[2] + self.user_input[1] + self.user_input[3:])
+
         # reverse two indices
         # particularly good to use is to switch the first two
         # and the last two
@@ -22,6 +23,31 @@ class WordScramble:
 
 
         # now try to scramble one sentence
+        sentence = self.user_input.strip().split(" ")
+
+        for i, word in enumerate(sentence):
+            if len(word) > 3:
+                temp_word = list(word)
+                if ',' in temp_word:
+                    temp = temp_word[1]
+                    temp_word[1] = temp_word[-3]
+                    temp_word[-3] = temp
+
+                else:
+                    temp = temp_word[1]
+                    temp_word[1] = temp_word[2]
+                    temp_word[2] = temp
+
+                temp_word = ''.join(temp_word)
+                sentence[i] = temp_word
+            sentence = ''.join(sentence)
+            print(sentence)
+
+
+
+
+        #print(" ".join(sentence))
+
         # do just words first, then you can move on to work on
         # punctuation
 
