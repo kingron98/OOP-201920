@@ -41,8 +41,9 @@ class WordScramble:
 
                 temp_word = ''.join(temp_word)
                 sentence[i] = temp_word
-            sentence = ''.join(sentence)
-            print(sentence)
+
+        sentence = ' '.join(sentence)
+        print(sentence)
 
 
 
